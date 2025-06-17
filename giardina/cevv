@@ -1,0 +1,3 @@
+def.agregar ()
+conn-squlite3.connect"deportista"
+ape.input
