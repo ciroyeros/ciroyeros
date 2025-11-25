@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gestión de Cursos</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  {% if injected_css|default('') %}
+  <style>
+    {{ injected_css|default('')|safe }}
+  </style>
+  {% endif %}
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Gestión de Cursos</h1>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <small>Trabajo Práctico</small>
+  </footer>
+
+</body>
+</html>

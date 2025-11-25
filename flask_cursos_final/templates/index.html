@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if inscripciones|length == 0 %}
+  <p>No hay inscripciones.</p>
+{% else %}
+  <div class="cards">
+    {% for insc in inscripciones %}
+      <div class="card">
+        <div class="card-grid">
+          <div class="card-left">
+            {% if insc['image_url'] %}
+              {% if insc['image_url'].startswith('static/') %}
+                <img class="course-img" src="{{ url_for('static', filename=insc['image_url'].split('static/')[1]) }}" alt="">
+              {% else %}
+                <img class="course-img" src="{{ insc['image_url'] }}" alt="">
+              {% endif %}
+            {% else %}
+              <img class="course-img" src="{{ url_for('static', filename='img/default-course.png') }}" alt="">
+            {% endif %}
+          </div>
+
+          <div class="card-right">
+            <h3>{{ insc['curso_nombre'] }}</h3>
+            <p>{{ insc['nombre_alumno'] }}</p>
+            <p>{{ insc['email_alumno'] }}</p>
+            <p>{{ insc['fecha_inscripcion'] }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% endblock %}

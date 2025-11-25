@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; background:#f6f7fb; color:#222; margin:0; padding:0; }
+.site-header { background:#2f6fb2; color:white; padding:18px; text-align:center; }
+.container { max-width:1000px; margin:18px auto; padding:12px; }
+.cards { display:flex; flex-direction:column; gap:12px; }
+.card { background:white; padding:12px; border-radius:8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.card-grid { display:flex; gap:12px; align-items:center; }
+.card-left { flex:0 0 160px; }
+.card-right { flex:1; }
+.course-img { width:150px; height:auto; border-radius:6px; object-fit:cover; }
+.site-footer { text-align:center; padding:12px; color:#666; font-size:13px; margin-top:18px; }
